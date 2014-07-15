@@ -1,7 +1,7 @@
 angular-restquest
 =================
 
-Rest client which returns a promise produced by $http.
+REST client which calls a resource and returns a promise produced by $http.
 
 # Basic usage
 
