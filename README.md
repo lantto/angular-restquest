@@ -11,8 +11,8 @@ var app = angular.module('myApp', ['restquest']);
 app.config(function(RqProvider) {
     RqProvider.setBaseUrl('http://example.com/');
 
-    RqProvider.addResource('articles');
-    RqProvider.addResource('users', ['comments', 'points']);
+    RqProvider.addResource('articles'); // Add resource /articles
+    RqProvider.addResource('users', ['comments', 'points']); // Add resources /users, /users/comments and /users/points
 });
 
 app.controller('MyCtrl', function($scope, Rq) {
