@@ -9,7 +9,7 @@ REST client which requests a resource and returns a promise produced by $http.
 var app = angular.module('myApp', ['restquest']);
 
 app.config(function(RqProvider) {
-    RqProvider.setBaseUrl('http://example.com/');
+    RqProvider.setBaseUrl('http://example.com');
 
     RqProvider.addResource('articles'); // Add resource /articles
     RqProvider.addResource('users', ['comments', 'points']); // Add resources /users, /users/comments and /users/points
