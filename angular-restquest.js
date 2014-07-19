@@ -75,16 +75,16 @@ module.provider('Rq', function() {
             
             if (!this._id) {
                 // /resource
-                config.url = baseUrl + this.url;
+                config.url = baseUrl + '/' + this.url;
             } else if (!this.subresource) {
                 // /resource/123
-                config.url = baseUrl + this.url + '/' + this._id;
+                config.url = baseUrl + '/' + this.url + '/' + this._id;
             } else if (!this.subresource.id) {
                 // /resource/123/subresource
-                config.url = baseUrl + this.url + '/' + this._id + '/' + this.subresource.url;
+                config.url = baseUrl + '/' + this.url + '/' + this._id + '/' + this.subresource.url;
             } else {
                 // /resource/123/subresource/456
-                config.url = baseUrl + this.url + '/' + this._id + '/' + this.subresource.url + '/' + this.subresource.id;
+                config.url = baseUrl + '/' + this.url + '/' + this._id + '/' + this.subresource.url + '/' + this.subresource.id;
             }
 
             return this._finalize(this.http(config));
